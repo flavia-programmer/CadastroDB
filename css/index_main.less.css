@@ -305,6 +305,7 @@ body:not(#afui) .upage-outer {
     margin-right: 6px;
   }
   #afui .d-margins {
+    margin-top: 10px;
     margin-bottom: 10px;
   }
 }

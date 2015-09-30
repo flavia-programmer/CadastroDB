@@ -134,14 +134,12 @@
             alert("Apagado com Sucesso!");
         });
         window.location.href = "index.html";
+
        
+        
    });
     
-    /* button  #btnEdit */
-    $(document).on("click", "#btnEdit", function(evt)
-    {
-         activate_page("#pgEditar"); 
-    });
+   
     
     }
     
