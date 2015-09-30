@@ -139,9 +139,32 @@
         
    });
     
-   
+    /*** ao carregar a pagina ***/
+     
     
-    }
+       /* var code = $(this).attr("CODIGO");
+        alert(code);
+        
+        var sql = "select * from cliente where CODIGO="+code;
+        
+        dati.query(sql,function(registros){
+            
+            if(registros.rows.length>0){
+                
+                var cliente = registros.rows.item(0);
+                
+                $("#dadosCliente").parent()
+                    .find(".formGroupHead").val(cliente.NOME);
+                $("#clienteIdade").val(cliente.IDADE);
+                $("#clienteSexo").val(cliente.SEXO);
+                $("#clienteTelefone").val(cliente.TELEFONE);
+                $("#clienteEmail").val(cliente.EMAIL);
+               
+    });*/
+     
+     /* ao carregar a pagina */
+    
+}
     
  document.addEventListener("app.Ready", register_event_handlers, false);
 })();
