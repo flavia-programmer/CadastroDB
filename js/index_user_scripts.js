@@ -142,29 +142,37 @@
     /*** ao carregar a pagina ***/
      
     
-       /* var code = $(this).attr("CODIGO");
-        alert(code);
+    /* button  #btnEdit */
+    $(document).on("click", "#btnEdit", function(evt){
         
-        var sql = "select * from cliente where CODIGO="+code;
+        var codigo = $("#clienteCodigo").text(codigo);
+//        alert(codigo);
+        
+        var sql = "select * from cliente where CODIGO="+codigo;
+        //alert(sql);
         
         dati.query(sql,function(registros){
-            
+//            alert(codigo);
             if(registros.rows.length>0){
-                
+               // alert(registros);
                 var cliente = registros.rows.item(0);
-                
-                $("#dadosCliente").parent()
-                    .find(".formGroupHead").val(cliente.NOME);
-                $("#clienteIdade").val(cliente.IDADE);
-                $("#clienteSexo").val(cliente.SEXO);
-                $("#clienteTelefone").val(cliente.TELEFONE);
-                $("#clienteEmail").val(cliente.EMAIL);
-               
-    });*/
-     
-     /* ao carregar a pagina */
+               // alert(cliente.NOME);
+                $("#editCampoNome").val(cliente.NOME);
+                $("#editCampoIdade").val(cliente.IDADE);
+                $("#editCampoSexo").val(cliente.SEXO);
+                $("#editCampoTelefone").val(cliente.TELEFONE);
+                $("#editCampoEmail").val(cliente.EMAIL);
+            }
+            else{
+                navigator.notification.alert("Nenhum registro encontrado.","INFORMAÇÃO",null,"OK");
+            }
+        });
+         $.ui.loadContent("#pgEditar",false,false,"slide");
+    });
+ /* ao carregar a pagina */
+
     
-}
+    }
     
  document.addEventListener("app.Ready", register_event_handlers, false);
 })();
