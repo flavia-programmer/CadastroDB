@@ -146,22 +146,51 @@
     $(document).on("click", "#btnEdit", function(evt){
         
         var codigo = $("#clienteCodigo").text(codigo);
-//        alert(codigo);
         
         var sql = "select * from cliente where CODIGO="+codigo;
-        //alert(sql);
+        
+          var sexo = $("#clienteSexo").text(sexo);
+                alert(sexo);
+                
+                if(sexo == "Masculino"){
+                    alert("entrou homem");
+                    //$('#editCampoSexo option[value="' + sexo + '"]').attr('selected', 'selected');
+                    //$("#editCampoSexo").val(sexo);
+                    //$("#editCampoSexo option").attr('selected', true); 
+                   // $("#editCampoSexo option").val('selected', true); 
+                    
+//                    $("#editCampoSexo option").each(function() {
+//                      if($(this).val() == sexo) {
+//                        $(this).attr('selected', 'selected');            
+//                      }                        
+//                    });
+                   $("#editCampoSexo option[text=" + sexo + "]").attr('selected', 'selected');
+                }
+                if(sexo == "Feminino"){
+                    alert("entrou muié");
+                   // $('#editCampoSexo option[value="' + sexo + '"]').attr('selected', 'selected');
+                    //$("#editCampoSexo").val(sexo);
+                       //$("#editCampoSexo option").val('selected', true); 
+//                    $("#editCampoSexo option").each(function() {
+//                      if($(this).val() == sexo) {
+//                        $(this).attr('selected', 'selected');            
+//                      }                        
+//                    });
+                   $("#editCampoSexo option[text=" + sexo + "]").attr('selected', 'selected');
+                }
+               
         
         dati.query(sql,function(registros){
-//            alert(codigo);
             if(registros.rows.length>0){
-               // alert(registros);
                 var cliente = registros.rows.item(0);
-               // alert(cliente.NOME);
                 $("#editCampoNome").val(cliente.NOME);
                 $("#editCampoIdade").val(cliente.IDADE);
-                $("#editCampoSexo").val(cliente.SEXO);
+               //$("#editCampoSexo").val(sexo);
                 $("#editCampoTelefone").val(cliente.TELEFONE);
                 $("#editCampoEmail").val(cliente.EMAIL);
+                
+              
+                
             }
             else{
                 navigator.notification.alert("Nenhum registro encontrado.","INFORMAÇÃO",null,"OK");

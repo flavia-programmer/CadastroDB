@@ -149,7 +149,7 @@
                                 </div>
                                 <div class="table-thing with-label widget uib_w_14 d-margins" data-uib="app_framework/select" data-ver="1">
                                     <label class="narrow-control label-inline" for="campoSexo">Sexo:</label>
-                                    <select required="" class="wide-control" id="campoSexo">
+                                    <select class="wide-control" id="campoSexo">
                                         <option>Masculino</option>
                                         <option>Feminino</option>
                                     </select>
@@ -314,10 +314,11 @@
                 <a class="button widget uib_w_38 d-margins icon pencil" data-uib="app_framework/button" data-ver="1" id="btnEdit">Editar</a>
                 <a class="button widget uib_w_39 d-margins icon error" data-uib="app_framework/button" data-ver="1" id="btnDelete">Apagar</a>
             </div>
+             <!-- INICIO editar -->
             <div class="upage vertical-col left panel" id="pgEditar" data-header="af-header-4" data-footer="af-footer-1">
                 <div class="widget uib_w_42 d-margins" data-uib="media/text" data-ver="0">
 
-                    <!-- INICIO editar -->
+                   
 
                     <div class="widget uib_w_43 d-margins" data-uib="app_framework/input_group" data-ver="1">
                         <div class="formGroupHead">Editar Dados pessoais</div>
@@ -328,15 +329,15 @@
                                     <div class="table-thing with-label widget uib_w_10 d-margins" data-uib="app_framework/input" data-ver="1">
                                         <label class="narrow-control label-inline" for="campoNome">Nome:</label>
 
-                                        <input required="" class="wide-control" type="text" id="editCampoNome" value="">
+                                        <input class="wide-control" type="text" id="editCampoNome" value="">
                                     </div>
                                     <div class="table-thing with-label widget uib_w_16 d-margins" data-uib="app_framework/input" data-ver="1">
                                         <label class="narrow-control label-inline" for="CampoIdade">Idade:</label>
-                                        <input required="" class="wide-control" type="number" id="editCampoIdade" value="">
+                                        <input class="wide-control" type="number" id="editCampoIdade" value="">
                                     </div>
                                     <div class="table-thing with-label widget uib_w_14 d-margins" data-uib="app_framework/select" data-ver="1">
-                                        <label class="narrow-control label-inline" for="campoSexo">Sexo:</label>
-                                        <select required="" class="wide-control" id="editCampoSexo">
+                                        <label class="narrow-control label-inline" for="editCampoSexo">Sexo:</label>
+                                        <select class="wide-control" id="editCampoSexo">
                                             <option>Masculino</option>
                                             <option>Feminino</option>
                                         </select>
@@ -367,16 +368,14 @@
                     <div class="widget uib_w_18 d-margins" data-uib="media/text" data-ver="0">
                         <div class="widget-container left-receptacle"></div>
                         <div class="widget-container right-receptacle"></div>
-
                     </div>
-
-                    <!--                    fim page editar-->
-
                 </div>
             </div>
         </div>
+          
         <footer class="wrap-element uib_w_44" data-uib="app_framework/footer" data-ver="1" id="af-footer-1"><a class="widget uib_w_45 d-margins icon check" data-uib="app_framework/button" data-ver="1" id="btnSalvar">Salvar</a>
         </footer>
+        <!--                    fim page editar-->
         <footer class="wrap-element uib_w_7" data-uib="app_framework/footer" data-ver="1" id="af-footer-0"><a class="widget uib_w_8 d-margins icon check orange" data-uib="app_framework/button" data-ver="1" id="btnCadastrar">Cadastrar</a>
         </footer>
     </body>
