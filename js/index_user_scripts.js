@@ -201,6 +201,35 @@
  /* ao carregar a pagina */
 
     
+        /* button  #btnSalvar */
+    $(document).on("click", "#btnSalvar", function(evt)
+    {
+        var codigo = $("#clienteCodigo").text(codigo);
+        
+        if($("#editCampoNome").val() == "" 
+           || $("#editCampoIdade").val() == "" 
+           || $("#editCampoSexo").val() == "" 
+           || $("#editCampoTelefone").val() == ""
+           || $("#editCampoEmail").val() == "" ){
+            alert("Todos Campos são obrigatórios!");
+            return;
+        }
+        
+        var registro = {
+                "NOME": $("#editCampoNome").val(),
+                "IDADE": $("#editCampoIdade").val(),
+                "SEXO": $("#editCampoSexo").val(),    
+                "TELEFONE": $("#editCampoTelefone").val(),
+                "EMAIL": $("#editCampoEmail").val(),                
+            };
+        
+        dati.update("cliente",registro,"CODIGO",+codigo,function(status){
+//        alert(status);
+             alert("Alterado com Sucesso!");
+        });
+         window.location.href = "index.html";
+    });
+    
     }
     
  document.addEventListener("app.Ready", register_event_handlers, false);
